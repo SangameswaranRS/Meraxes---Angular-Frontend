@@ -1,0 +1,19 @@
+<div>
+  <br>
+  {{queryString}}
+  <br>
+  <br>
+  <ol *ngFor="let success of successResponse">
+    <li>
+      assetId: {{success.assetId}}
+      <br>
+      description: {{success.description}}
+      <br>
+      mainExchange: {{success.mainExchange}}
+      <br>
+      quantity: {{success.quantity}}
+      <br>
+      owner: {{success.owner}}
+    </li>
+  </ol>
+</div>

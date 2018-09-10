@@ -1,0 +1,12 @@
+<div>
+  Please Enter the details to initiate asset transfer transaction:
+  <br>
+  <br>
+  Commodity (namespace included): <input type="text" #comm="ngModel"  [(ngModel)]="commodity" placeholder="Commodity" required minlength="20">
+  <br>
+  <br>
+  New Owner (namespace included): <input type="text" #newOne="ngModel"  [(ngModel)]="newOwner" placeholder="new Owner" required minlength="20">
+  <br>
+  <br>
+  <button type="button" [disabled] = "comm.invalid || newOne.invalid" (click)="initiateTxn()">Transfer Asset</button>
+</div>

@@ -1,0 +1,16 @@
+<div>
+  Transfer money to other traders
+  <br>
+  <br>
+  Money to be transferred:
+  <input type="number" placeholder="amount" required [(ngModel)]="amountToBeTransferred" #amt="ngModel">
+  <br>
+  <br>
+  Transfer Initiating Trader: <input type="text" placeholder="Transfer Initiating Trader" required minlength="20" [(ngModel)]="transferInitTrader" #tinit="ngModel">
+  <br>
+  <br>
+  Beneficiary Trader: <input type="text" placeholder="Beneficiary Trader" required minlength="20" [(ngModel)]="beneficiaryTrader" #binit="ngModel">
+  <br>
+  <br>
+  <button type="button" [disabled] = "amt.invalid || tinit.invalid || binit.invalid " (click)="initTxn()">Transfer Money</button>
+</div>

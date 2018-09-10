@@ -1,0 +1,15 @@
+<div>
+  List of Participants:
+
+  <ul *ngFor="let success of successResponse">
+    <li>
+      trade Id: {{success.tradeId}}
+      <br>
+      First Name: {{success.firstName}}
+      <br>
+      Last Name: {{success.lastName}}
+      <br>
+      account Balance:{{success.accountBalance}}
+    </li>
+  </ul>
+</div>

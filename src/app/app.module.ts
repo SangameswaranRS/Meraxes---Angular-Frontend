@@ -1,16 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { ParticipantViewComponent } from './participant-view/participant-view.component';
+import { AssetViewComponent } from './asset-view/asset-view.component';
+import { AssetTransferComponent } from './asset-transfer/asset-transfer.component';
+import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParticipantViewComponent,
+    AssetViewComponent,
+    AssetTransferComponent,
+    MoneyTransferComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
