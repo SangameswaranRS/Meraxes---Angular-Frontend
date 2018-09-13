@@ -8,6 +8,7 @@ import { ParticipantViewComponent } from './participant-view/participant-view.co
 import { AssetViewComponent } from './asset-view/asset-view.component';
 import { AssetTransferComponent } from './asset-transfer/asset-transfer.component';
 import { MoneyTransferComponent } from './money-transfer/money-transfer.component';
+import { HistorianComponent } from './historian/historian.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MoneyTransferComponent } from './money-transfer/money-transfer.componen
     ParticipantViewComponent,
     AssetViewComponent,
     AssetTransferComponent,
-    MoneyTransferComponent
+    MoneyTransferComponent,
+    HistorianComponent
   ],
   imports: [
     BrowserModule,

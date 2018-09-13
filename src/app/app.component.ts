@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes,Router } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 import {HttpClient} from '@angular/common/http';
 
 
@@ -9,16 +9,16 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  router:any;
+  router: any;
   currentUser: any;
   httpClient: any;
   title = 'app';
-  constructor(router: Router,httpClient:HttpClient){
+  constructor(router: Router, httpClient: HttpClient) {
     this.currentUser = 'anonymous';
     this.router = router;
     this.httpClient = httpClient;
     this.httpClient.get('http://localhost:3000/api/system/ping').toPromise().then(
-      success =>{
+      success => {
         console.log(success);
         this.currentUser = success.participant;
       },
@@ -29,16 +29,19 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
   }
-  navigateAssetTransfer(){
+  navigateAssetTransfer() {
     this.router.navigate(['asset-transfer']);
   }
-  navigateMoneyTransfer(){
+  navigateMoneyTransfer() {
     this.router.navigate(['money-transfer']);
   }
-  navigateAssetView(){
+  navigateAssetView() {
     this.router.navigate(['asset-view']);
   }
-  navigateParticipantView(){
+  navigateParticipantView() {
     this.router.navigate(['participant-view']);
+  }
+  navigateHistorian() {
+    this.router.navigate(['historian']);
   }
 }

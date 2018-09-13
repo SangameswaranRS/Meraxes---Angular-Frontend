@@ -1,0 +1,21 @@
+<div>
+  Following is the authenticated list of Historian Records.
+  <br>
+  <br>
+  <ul *ngFor="let response of responseJson">
+     <li> General Info =>
+      class: {{response.$class}}<br>
+      txnId: {{response.transactionId}}<br>
+      txnType: {{response.transactionType}}<br>
+      transactionInvoked: {{response.transactionInvoked}}<br>
+      participantInvoking: {{response.participantInvoking}}<br>
+      identityUsed: {{response.identityUsed}}
+      <br>
+      <br>
+      <code>
+      Events Emitted Info => {{response.eventsEmitted}}
+    </code>
+      <br><br>
+    </li>
+  </ul>
+</div>
